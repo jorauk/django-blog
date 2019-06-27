@@ -3,8 +3,15 @@ from myblog.models import Post
 from myblog.models import Category
 
 
+class CategoryInline(admin.TabularInLine):
+    model = Category
+
+
 class PostAdmin(admin.ModelAdmin):
-    pass
+    inlines = [
+        CategoryInline
+    ]
+
     
 class CategoryAdmin(admin.ModelAdmin):
     pass
