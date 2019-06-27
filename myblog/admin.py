@@ -6,15 +6,13 @@ from myblog.models import Category
 class CategoryInline(admin.TabularInLine):
     model = Category
 
-
 class PostAdmin(admin.ModelAdmin):
     inlines = [
         CategoryInline
     ]
-
     
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    exclude = ('posts',)
 
 
 admin.site.register(Post, PostAdmin)
