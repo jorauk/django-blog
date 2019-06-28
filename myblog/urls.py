@@ -12,6 +12,6 @@ urlpatterns = [
     path('posts/<int:post_id>/',
         detail_view,
         name="blog_detail"),
-    path('latest/feed',
+    path('latest/feed/',
         LatestEntriesFeed()),
 ]
