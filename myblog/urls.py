@@ -1,5 +1,5 @@
 from django.urls import path
-from .feeds import LatestEntriesFeed
+from myblog.feeds import LatestEntriesFeed
 from .views import stub_view
 from .views import list_view
 from .views import detail_view
